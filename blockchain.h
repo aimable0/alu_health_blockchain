@@ -163,4 +163,7 @@ void save_state();
 void load_state();
 void verify_blockchain();
 
+extern int current_model;
+void switch_ledger_model(void);
+
 #endif

@@ -3,6 +3,14 @@
 #include <stdlib.h>
 #include <string.h>
 
+
+int current_model = 2; // 2 = ACCOUNT, 1 = UTXO
+
+void switch_ledger_model() {
+    current_model = (current_model == 1) ? 2 : 1;
+    printf("\n[+] Switched ledger model to %s.\n", current_model == 1 ? "UTXO" : "Account-Based");
+}
+
 Account* account_head = NULL;
 UTXO* utxo_head = NULL;
 
