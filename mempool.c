@@ -26,7 +26,7 @@ void check_fraud(Transaction* tx) {
         if(strcmp(curr->tx.sender_address, tx->sender_address) == 0) freq++;
         curr = curr->next;
     }
-    if(freq >= 3) {
+    if(freq >= 2) {
         strcpy(tx->status, TX_SUSPICIOUS);
         printf("[!] FRAUD ALERT: High frequency sender.\n");
         return;
